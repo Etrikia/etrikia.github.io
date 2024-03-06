@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>art</title>
+<style type="text/css">
+#padding {
+    padding: 10px;}
+body{
+    font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+    font-style: normal;
+    font-size: 14px;
+    background-color:#F1E4C3;
+}
+nav {margin:auto;text-align:center;background-color:#E98E99; }
+body,td,th {
+    font-size: 18px;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+    font-weight: normal;
+    color:black;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+}
+h1 {
+	font-size: 24px; background-color:#F7C5A8;}
+}
+a:link {color:white
+	}
+	
+a:visited {
+    color:cornflowerblue;
+}
+a:hover {
+    color:#597E52;
+}
+a:active {}
+table,td,th {text-align: center; border-color:#99CC66; border: 3px, solid; border-style: solid; align-content: center; align-items: center;}
+.centerlogo {
+	display:block;
+  margin-left: auto;
+  margin-right: auto;}
+.center {
+  margin-left: auto;
+  margin-right: auto;}
+	<style>
+* {
+  box-sizing: border-box;
+}
+
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 200px ;
+height: 200x;
+  padding: 10px;
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.6; 
+  cursor: pointer; 
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container */
+.container {
+  position: relative;
+  display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+.floatingdiv {
+    margin: 5px;
+    padding: 10px;
+    float: left;
+    width: auto;
+    border-color: #E98E99;}
+.scroll {
+  overflow: auto;
+  white-space: nowrap;
+  padding: 10px;
+}
+</style>
+</head>
+
+<body>
+	<h1><img src="etriklogo.png" alt="logo" width="301" height="84" id="padding" class="centerlogo"/> </h1>
+<h1>
+<h1>
+  <nav> <a href="index.html">Home</a> | <a href="commissions.html">Commissions</a>| <a href="art.html">Art</a> |
+  <a href="about.html">About</a> | <a href="forms.html">Forms</a></nav>
+</h1>
+<hr>
+<div style="text-align:center">
+  <h1>Gallery</h1>
+</div>
+
+<!-- columns -->
+<div class="row scroll">
+  <div class="column">
+    <img src="img1.png" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="img2.png"  style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="img3.png" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="img4.png" style="width:100%" onclick="myFunction(this);">
+	  </div>
+	<div class="column">
+    <img src="img5.png" style="width:100%" onclick="myFunction(this);">
+  </div>
+</div>
+
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:40%">
+  <div id="imgtext"></div>
+</div>
+
+<script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+}
+</script>
+
+</body>	
+</body>
+</html>
